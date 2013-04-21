@@ -16,12 +16,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="#">Zassy</a>
+        <a class="brand" href="#" onclick="backToTop()">Zassy</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" data-toggle="modal">About</a></li>
           </ul>
         </div>
       </div>
@@ -35,15 +33,32 @@
   </div>
   <div class="container">
     <ul class="pager">
-      <li><a href="#more-item" onclick="moreItem()">More</a></li>
+      <li><a id ="more-item" href="#more-item" onclick="moreItem()">More</a></li>
     </ul>
   </div>
   <div id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="navbar-inner">
       <div class="container">
-        <p class="navbar-text pull-left">&copy; 2013 hamburgerkid</p>
-        <p class="navbar-text pull-right"><a href="#back-top" onclick="backToTop()">Back to Top</a></p>
+        <p class="navbar-text pull-left">Powered by <a href="http://webservice.rakuten.co.jp" target="_blank">Rakuten Webservice</a></p>
+        <ul class="nav pull-right">
+          <li><p class="navbar-text">&copy; 2013 hamburgerkid</p></li>
+          <li><a href="#" onclick="backToTop()">Back to Top</a></li>
+        </ul>
       </div>
+    </div>
+  </div>
+
+  <!-- This part will show up as modal window. -->
+  <div id="about" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="modalLabel">About Zassy</h3>
+    </div>
+    <div class="modal-body text-center">
+      <h1>ジャケ買いしよう</h1>
+    </div>
+    <div class="modal-footer">
+      <p><a href="http://about.me/hamburgerkid" target="_blank">hamburgerkid</a></p>
     </div>
   </div>
 
