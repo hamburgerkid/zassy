@@ -1,6 +1,18 @@
 body{
   padding: 50px 10px 50px 10px; 
 }
+#tweet{
+  padding: 10px 0px 5px 0px;
+}
+#like{
+  padding: 10px 0px 5px 0px;
+}
+#line{
+  padding: 5px 0px 5px 15px;
+}
 #item{
   padding: 5px 0px 5px 0px;
+}
+#burger{
+  height: 30px;
 }
