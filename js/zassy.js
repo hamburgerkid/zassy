@@ -76,8 +76,12 @@ $(document).ready(function() {
     backToTop()
   });
 
-  $("#back").click(function() {
+  $("#backtop").click(function() {
     backToTop()
+  });
+
+  $("#backhome").click(function() {
+    window.location.replace('index.html')
   });
 });
 
