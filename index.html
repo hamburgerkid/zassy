@@ -14,8 +14,8 @@
   <link href="css/zassy.css" rel="stylesheet">
 </head>
 <body>
-  <div id="header" class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div id="header" class="navbar-inner">
       <div class="container">
         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
@@ -39,7 +39,7 @@
             <li id="line">
               <span>
                 <script type="text/javascript" src="http://media.line.naver.jp/js/line-button.js?v=20130417"></script>
-                <script type="text/javascript">new jp.naver.line.media.LineButton({"pc":true,"lang":"ja","type":"c"});</script>
+                <script type="text/javascript">new jp.naver.line.media.LineButton({"pc":true,"lang":"ja","type":"a"});</script>
               </span>
             </li>
           </ul>
@@ -47,19 +47,21 @@
       </div>
     </div>
   </div>
-  <div id="content" class="container-fluid">
-    <!-- Item will show up here. -->
+  <div id="base">
+    <div id="content" class="container-fluid">
+      <!-- Item will show up here. -->
+    </div>
+    <div id="message" class="container">
+      <!-- Message will show up here. -->
+    </div>
+    <div class="container">
+      <ul class="pager">
+        <li><a id ="more" href="#">More</a></li>
+      </ul>
+    </div>
   </div>
-  <div id="message" class="container">
-    <!-- Message will show up here. -->
-  </div>
-  <div class="container">
-    <ul class="pager">
-      <li><a id ="more" href="#">More</a></li>
-    </ul>
-  </div>
-  <div id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="navbar-inner">
+  <div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div id="fotter" class="navbar-inner">
       <div class="container">
         <p class="navbar-text pull-left">Powered by <a href="http://webservice.rakuten.co.jp" target="_blank">Rakuten Webservice</a></p>
         <ul class="nav pull-right">
@@ -76,7 +78,7 @@
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
       <h3 id="modalLabel">About Zassy</h3>
     </div>
-    <div class="modal-body">
+    <div class="modal-body text-left">
       <h1>We hope you buy any</h1><h1>only because of the cover.</h1>
       <p class="text-center"><a href="http://about.me/hamburgerkid" target="_blank"><img id="burger" src="img/favicon.ico" class="img-rounded"></a></p>
     </div>
@@ -88,4 +90,5 @@
   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/zassy.js"></script>
+</body>
 </html>

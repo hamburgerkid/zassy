@@ -1,5 +1,12 @@
-body{
-  padding: 50px 10px 50px 10px; 
+#base{
+  padding: 50px 5px 50px 5px;
+  text-align: center;
+}
+#header{
+  padding: 0px 5px 0px 5px;
+}
+#footer{
+  padding: 0px 5px 0px 5px;
 }
 #tweet{
   padding: 10px 0px 5px 0px;
@@ -8,7 +15,10 @@ body{
   padding: 10px 0px 5px 0px;
 }
 #line{
-  padding: 5px 0px 5px 15px;
+  padding: 10px 0px 5px 10px;
+}
+#content{
+  display: inline-block;
 }
 #item{
   padding: 5px 0px 5px 0px;
