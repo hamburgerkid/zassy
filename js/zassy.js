@@ -1,10 +1,10 @@
 var count = 0
 var page = 1
-var firstLimit = 3
+var init = 3
 var column = 5
-var hit = 20
+var hit = 10
 var above = 100
-var pageLimit = 100
+var limit = 100
 
 var checkGenre = function(booksGenreId) {
   if (booksGenreId.indexOf('007610001')) {
@@ -27,7 +27,7 @@ var loadItem = function() {
           url = url.replace('?_ex=200x200', '')
           var divItem = '<div id="item" class="span2"><a href="' + item.affiliateUrl + '" target="_blank"><img src="' + url + '" class="img-rounded"></a></div>'
           $(divItem).appendTo('#content');
-          count++
+          ++count
         }
         if (count % column === 0) {
           var divRight = '</div>'
@@ -39,11 +39,11 @@ var loadItem = function() {
 };
 
 var moreItem = function() {
-  if (page < pageLimit) {
+  if (page < limit) {
     loadItem()
     ++page
-  } else if (page === pageLimit) {
-    var divMsg = '<div class="alert alert-info"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>All Zassy Aleady Shown. Click Your Favorite One Right Now. Thanks.</strong></div>'
+  } else if (page === limit) {
+    var divMsg = '<div class="alert alert-info"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>All covers are aleady shown. You can pick your favorite one now. Thanks.</strong></div>'
     $(divMsg).appendTo('#message');
     $('#more').hide();
     ++page
@@ -57,11 +57,11 @@ var backToTop = function() {
 };
 
 $(document).ready(function() {
-  while (page < firstLimit) {
+  while (page < init) {
     loadItem()
     ++page
   }
-  
+
   $(window).scroll(function() {
     if ($(window).scrollTop() + $(window).height() > $(document).height() - above) {
       moreItem()
@@ -101,7 +101,5 @@ $(document).ready(function() {
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-40371631-1', 'zassy.info');
 ga('send', 'pageview');
-

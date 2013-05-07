@@ -1,31 +1,57 @@
-#base{
-  padding: 50px 5px 50px 5px;
-  text-align: center;
+@media (min-width: 1200px) {
+	#base{
+		padding: 50px 5px 50px 5px;
+		text-align: center;
+	}
+}
+@media (min-width: 980px) {
+	#base{
+		padding: 50px 5px 50px 5px;
+		text-align: center;
+	}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	#base{
+		padding: 5px 5px 5px 5px;
+		text-align: center;
+	}
+}
+@media (max-width: 767px) {
+	#base{
+		padding: 0px 5px 0px 5px;
+		text-align: center;
+	}
+}
+@media (max-width: 480px) {
+	#base{
+		padding: 0px 5px 0px 5px;
+		text-align: center;
+	}
 }
 #header{
-  padding: 0px 5px 0px 5px;
+	padding: 0px 5px 0px 5px;
 }
 #footer{
-  padding: 0px 5px 0px 5px;
+	padding: 0px 5px 0px 5px;
 }
 #tweet{
-  padding: 10px 0px 5px 0px;
+	padding: 10px 0px 5px 0px;
 }
 #like{
-  padding: 10px 0px 5px 0px;
+	padding: 10px 0px 5px 0px;
 }
 #line{
-  padding: 10px 0px 5px 10px;
+	padding: 10px 0px 5px 10px;
 }
 #content{
-  display: inline-block;
+	display: inline-block;
 }
 #item{
-  padding: 5px 0px 5px 0px;
+	padding: 5px 0px 5px 0px;
 }
 #burger{
-  height : 30px;
+	height : 30px;
 }
 #error{
-  padding: 30px 0px 50px 0px;
+	padding: 10px 0px 50px 0px;
 }
