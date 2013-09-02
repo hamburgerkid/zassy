@@ -2,7 +2,6 @@ var count = 0
 var page = 1
 var init = 3
 var column = 5
-var hit = 10
 var above = 100
 var limit = 100
 
@@ -14,7 +13,10 @@ var checkGenre = function(booksGenreId) {
 };
 
 var loadItem = function() {
-  $.getJSON('https://app.rakuten.co.jp/services/api/BooksMagazine/Search/20121128?applicationId=bd7dad817cb2f7fab2890e0b513db00d&affiliateId=11159626.d2e91abc.11159627.079be713&booksGenreId=007&hits=' + hit + '&page=' + page + '&chirayomiFlag=0&sort=-releaseDate&elements=booksGenreId,affiliateUrl,largeImageUrl',
+  $.getJSON('https://app.rakuten.co.jp/services/api/BooksMagazine/Search/20121128?callback=?',
+            {applicationId:'bd7dad817cb2f7fab2890e0b513db00d',affiliateId:'11159626.d2e91abc.11159627.079be713',
+            booksGenreId:'007',hits:10,page:page,chirayomiFlag:0,
+            sort:'-releaseDate',elements:'booksGenreId,affiliateUrl,largeImageUrl'},
   function(data) {
     $.each(data.Items, function(i, items) {
       $.each(items, function(j, item) {
